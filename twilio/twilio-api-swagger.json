@@ -1,0 +1,1136 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"title": "Twilio API",
+		"description": "The Twilio REST API allows you to query meta-data about your account, phone numbers, calls, text messages, and recordings. You can also do some fancy things like initiate outbound calls and send text messages.",
+		"termsOfService": null,
+		"version": "2010-04-01"
+	},
+	"host": "api.twilio.com",
+	"basePath": "/2010-04-01",
+	"schemes": ["http"],
+	"produces": ["application/json"],
+	"consumes": ["application/json"],
+	"paths": {
+		"/{AccountSid}.{format}": {
+			"get": {
+				"summary": "GetAccount",
+				"description": "GetAccount",
+				"operationId": "getaccount",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			},
+			"post": {
+				"summary": "UpdateFriendlyName (POST)",
+				"description": "UpdateFriendlyName (POST)",
+				"operationId": "updatefriendlyname-post",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			},
+			"put": {
+				"summary": "UpdateFriendlyName (PUT)",
+				"description": "UpdateFriendlyName (PUT)",
+				"operationId": "updatefriendlyname-put",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			}
+		},
+		"/{AccountSid}/AvailablePhoneNumbers/{IsoCountryCode}/Local.{format}": {
+			"get": {
+				"summary": "GetAvailableLocalPhoneNumberList",
+				"description": "GetAvailableLocalPhoneNumberList",
+				"operationId": "getavailablelocalphonenumberlist",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "IsoCountryCode",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			}
+		},
+		"/{AccountSid}/AvailablePhoneNumbers/{IsoCountryCode}/TollFree.{format}": {
+			"get": {
+				"summary": "GetAvailableTollFreePhoneNumberList",
+				"description": "GetAvailableTollFreePhoneNumberList",
+				"operationId": "getavailabletollfreephonenumberlist",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "IsoCountryCode",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			}
+		},
+		"/{AccountSid}/Calls.{format}": {
+			"get": {
+				"summary": "GetCallList",
+				"description": "GetCallList",
+				"operationId": "getcalllist",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			},
+			"post": {
+				"summary": "MakeCall",
+				"description": "MakeCall",
+				"operationId": "makecall",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			}
+		},
+		"/{AccountSid}/Calls/{CallSid}.{format}": {
+			"get": {
+				"summary": "GetCall",
+				"description": "GetCall",
+				"operationId": "getcall",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "CallSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			},
+			"post": {
+				"summary": "ModifyLiveCall",
+				"description": "ModifyLiveCall",
+				"operationId": "modifylivecall",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "CallSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			}
+		},
+		"/{AccountSid}/Calls/{CallSid}/Notifications.{format}": {
+			"get": {
+				"summary": "GetNotificationListForCall",
+				"description": "GetNotificationListForCall",
+				"operationId": "getnotificationlistforcall",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "CallSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			}
+		},
+		"/{AccountSid}/Calls/{CallSid}/Recordings.{format}": {
+			"get": {
+				"summary": "GetRecordingListForCall",
+				"description": "GetRecordingListForCall",
+				"operationId": "getrecordinglistforcall",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "CallSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			}
+		},
+		"/{AccountSid}/Conferences.{format}": {
+			"get": {
+				"summary": "GetConferenceListForAccount",
+				"description": "GetConferenceListForAccount",
+				"operationId": "getconferencelistforaccount",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			}
+		},
+		"/{AccountSid}/Conferences/{ConferenceSid}.{format}": {
+			"get": {
+				"summary": "GetConference",
+				"description": "GetConference",
+				"operationId": "getconference",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "ConferenceSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			}
+		},
+		"/{AccountSid}/Conferences/{ConferenceSid}/Participants.{format}": {
+			"get": {
+				"summary": "GetParticipantListForConference",
+				"description": "GetParticipantListForConference",
+				"operationId": "getparticipantlistforconference",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "ConferenceSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			}
+		},
+		"/{AccountSid}/Conferences/{ConferenceSid}/Participants/{CallSid}.{format}": {
+			"delete": {
+				"summary": "DeleteParticipant",
+				"description": "DeleteParticipant",
+				"operationId": "deleteparticipant",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "CallSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "ConferenceSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			},
+			"get": {
+				"summary": "GetParticipantForConference",
+				"description": "GetParticipantForConference",
+				"operationId": "getparticipantforconference",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "CallSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "ConferenceSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			},
+			"post": {
+				"summary": "MuteParticipant",
+				"description": "MuteParticipant",
+				"operationId": "muteparticipant",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "CallSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "ConferenceSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			}
+		},
+		"/{AccountSid}/IncomingPhoneNumbers.{format}": {
+			"get": {
+				"summary": "GetIncomingPhoneNumberList",
+				"description": "GetIncomingPhoneNumberList",
+				"operationId": "getincomingphonenumberlist",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			},
+			"post": {
+				"summary": "AddIncomingPhoneNumber",
+				"description": "AddIncomingPhoneNumber",
+				"operationId": "addincomingphonenumber",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			}
+		},
+		"/{AccountSid}/IncomingPhoneNumbers/{IncomingPhoneNumberSid}.{format}": {
+			"delete": {
+				"summary": "DeleteIncomingPhoneNumber",
+				"description": "DeleteIncomingPhoneNumber",
+				"operationId": "deleteincomingphonenumber",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "IncomingPhoneNumberSid",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			},
+			"get": {
+				"summary": "GetIncomingPhoneNumber",
+				"description": "GetIncomingPhoneNumber",
+				"operationId": "getincomingphonenumber",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "IncomingPhoneNumberSid",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			},
+			"post": {
+				"summary": "UpdateIncomingPhoneNumber (POST)",
+				"description": "UpdateIncomingPhoneNumber (POST)",
+				"operationId": "updateincomingphonenumber-post",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "IncomingPhoneNumberSid",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			},
+			"put": {
+				"summary": "UpdateIncomingPhoneNumber (PUT)",
+				"description": "UpdateIncomingPhoneNumber (PUT)",
+				"operationId": "updateincomingphonenumber-put",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "IncomingPhoneNumberSid",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			}
+		},
+		"/{AccountSid}/Notifications.{format}": {
+			"get": {
+				"summary": "GetNotificationList",
+				"description": "GetNotificationList",
+				"operationId": "getnotificationlist",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			}
+		},
+		"/{AccountSid}/Notifications/{NotificationSid}.{format}": {
+			"delete": {
+				"summary": "DeleteNotification",
+				"description": "DeleteNotification",
+				"operationId": "deletenotification",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "NotificationSid",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			},
+			"get": {
+				"summary": "GetNotification",
+				"description": "GetNotification",
+				"operationId": "getnotification",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "NotificationSid",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			}
+		},
+		"/{AccountSid}/OutgoingCallerIds.{format}": {
+			"get": {
+				"summary": "GetOutgoingCallerIdList",
+				"description": "GetOutgoingCallerIdList",
+				"operationId": "getoutgoingcalleridlist",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			},
+			"post": {
+				"summary": "AddOutgoingCallerId",
+				"description": "AddOutgoingCallerId",
+				"operationId": "addoutgoingcallerid",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			}
+		},
+		"/{AccountSid}/OutgoingCallerIds/{OutgoingCallerIdSid}.{format}": {
+			"delete": {
+				"summary": "DeleteOutgoingCallerId",
+				"description": "DeleteOutgoingCallerId",
+				"operationId": "deleteoutgoingcallerid",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "OutgoingCallerIdSid",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			},
+			"get": {
+				"summary": "GetOutgoingCallerId",
+				"description": "GetOutgoingCallerId",
+				"operationId": "getoutgoingcallerid",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "OutgoingCallerIdSid",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			},
+			"post": {
+				"summary": "UpdateOutgoingCallerId (POST)",
+				"description": "UpdateOutgoingCallerId (POST)",
+				"operationId": "updateoutgoingcallerid-post",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "OutgoingCallerIdSid",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			},
+			"put": {
+				"summary": "UpdateOutgoingCallerId (PUT)",
+				"description": "UpdateOutgoingCallerId (PUT)",
+				"operationId": "updateoutgoingcallerid-put",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "OutgoingCallerIdSid",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			}
+		},
+		"/{AccountSid}/Recordings.{format}": {
+			"get": {
+				"summary": "GetRecordingListForAccount",
+				"description": "GetRecordingListForAccount",
+				"operationId": "getrecordinglistforaccount",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			}
+		},
+		"/{AccountSid}/Recordings/{RecordingSid}.{format}": {
+			"delete": {
+				"summary": "DeleteRecording",
+				"description": "DeleteRecording",
+				"operationId": "deleterecording",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "RecordingSid",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			},
+			"get": {
+				"summary": "GetRecording",
+				"description": "GetRecording",
+				"operationId": "getrecording",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "RecordingSid",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			}
+		},
+		"/{AccountSid}/Recordings/{RecordingSid}/Transcriptions.{format}": {
+			"get": {
+				"summary": "GetTranscriptionListForRecording",
+				"description": "GetTranscriptionListForRecording",
+				"operationId": "gettranscriptionlistforrecording",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "RecordingSid",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			}
+		},
+		"/{AccountSid}/Sandbox.{format}": {
+			"get": {
+				"summary": "GetSandbox",
+				"description": "GetSandbox",
+				"operationId": "getsandbox",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			},
+			"post": {
+				"summary": "UpdateSandbox (POST)",
+				"description": "UpdateSandbox (POST)",
+				"operationId": "updatesandbox-post",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			},
+			"put": {
+				"summary": "UpdateSandbox (PUT)",
+				"description": "UpdateSandbox (PUT)",
+				"operationId": "updatesandbox-put",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			}
+		},
+		"/{AccountSid}/SMS/Messages.{format}": {
+			"get": {
+				"summary": "GetSMSList",
+				"description": "GetSMSList",
+				"operationId": "getsmslist",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			},
+			"post": {
+				"summary": "SendSMS",
+				"description": "SendSMS",
+				"operationId": "sendsms",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			}
+		},
+		"/{AccountSid}/SMS/Messages/{SMSMessageSid}.{format}": {
+			"get": {
+				"summary": "GetSMS",
+				"description": "GetSMS",
+				"operationId": "getsms",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "SMSMessageSid",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			}
+		},
+		"/{AccountSid}/Transcriptions.{format}": {
+			"get": {
+				"summary": "GetTranscriptionList",
+				"description": "GetTranscriptionList",
+				"operationId": "gettranscriptionlist",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			}
+		},
+		"/{AccountSid}/Transcriptions/{TranscriptionSid}.{format}": {
+			"get": {
+				"summary": "GetTranscription",
+				"description": "GetTranscription",
+				"operationId": "gettranscription",
+				"parameters": [{
+					"in": "path",
+					"name": "AccountSid",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "format",
+					"type": "string"
+				},
+				{
+					"in": "path",
+					"name": "TranscriptionSid",
+					"type": "string"
+				}],
+				"responses": {
+					"200": {
+						"description": "OK"
+					}
+				},
+				"tags": [""]
+			}
+		}
+	},
+	"definitions": []
+}
